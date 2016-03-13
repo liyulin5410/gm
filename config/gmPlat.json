@@ -1,0 +1,200 @@
+{
+  "board": [
+    "/account",
+    "/account/board"
+  ],
+  "arpu": [
+    "/arpu",
+    "/arpu/stats"
+  ],
+  "retention": [
+    "/retention",
+    "/retention/stats"
+  ],
+  "paidRetention": [
+    "/paidRetention",
+    "/paidRetention/stats"
+  ],
+  "announce": [
+    "/announce",
+    "/announce/new",
+    "/announce/get",
+    "/announce/cancel",
+    "/setClosing",
+    "/getClosing"
+  ],
+  "player": [
+    "/player",
+    "/player/query",
+    "/player/get",
+    "/player/gmRecord",
+    "/player/setAvatar",
+    "/player/getAuthorization"
+  ],
+  "robot": [
+    "/robot",
+    "/robot/getClosing",
+    "/robot/setClosing",
+    "/resetRobotCount",
+    "/robot/setRatio",
+    "/robot/getGoodHandRatio",
+    "/robot/setGoodHandRatio",
+    "/robot/getProbs",
+    "/robot/setProbs",
+    "/robot/getInsiderProbs",
+    "/robot/setInsiderProbs",
+    "/robot/getBadLuckGuyProb",
+    "/robot/setBadLuckGuyProb",
+    "/robot/getGoodLuckProb",
+    "/robot/setGoodLuckProb",
+    "/robot/new"
+  ],
+  "diamond": [
+    "/diamond",
+    "/diamond/logs"
+  ],
+  "gamingMoney": [
+    "/gamingMoney",
+    "/gamingMoney/logs"
+  ],
+  "insiderGamingMoney": [
+    "/gamingMoney/insider",
+    "/gamingMoney/getInsiderLogs"
+  ],
+  "cdKey": [
+    "/CDKEY",
+    "/CDKEY/batch",
+    "/CDKEY/create",
+    "/CDKEY/update",
+    "/CDKEY/details",
+    "/CDKEY/new",
+    "/CDKEY/delete"
+  ],
+  "cdKeyOrder": [
+    "/CDKEY/order",
+    "/CDKEY/orderList"
+  ],
+  "coupon": [
+    "/coupon",
+    "/coupon/get"
+  ],
+  "present": [
+    "/present",
+    "/present/type",
+    "/present/create",
+    "/present/update",
+    "/present/query",
+    "/present/new",
+    "/present/delete"
+  ],
+  "systemAction": [
+    "/action",
+    "/action/get"
+  ],
+  "feedback": [
+    "/feedback",
+    "/feedback/get"
+  ],
+  "presentExchange": [
+    "/presentExchange",
+    "/presentExchange/get"
+  ],
+  "recharge": [
+    "/recharge",
+    "/recharge/get",
+    "/recharge/setClosing",
+    "/recharge/setActivity",
+    "/recharge/setReportRecharge",
+    "/recharge/addProviderIp",
+    "/recharge/setTab"
+  ],
+  "cards": [
+    "/cards",
+    "/cards/getTableInfo"
+  ],
+  "channel": [
+    "/channel",
+    "/channel/query",
+    "/channel/getMessage",
+    "/channel/answer",
+    "/channel/delete"
+  ],
+  "poker": [
+    "/poker",
+    "/poker/getPokerResult"
+  ],
+  "accountAnnounce": [
+    "/accountAnnounce",
+    "/accountAnnounce/get"
+  ],
+  "beauty": [
+    "/beauty",
+    "/beauty/query",
+    "/beauty/getBeauty",
+    "/beauty/authBeauty"
+  ],
+  "activity": [
+    "/activity",
+    "/activity/list",
+    "/activity/add",
+    "/activity/update",
+    "/activity/details",
+    "/activity/setState",
+    "/activity/addAward",
+    "/activity/deleteAward",
+    "/activity/getActivityAccounts"
+  ],
+  "authorization": [
+    "/authorization",
+    "/authorization/getAccounts",
+    "/authorization/addAccount",
+    "/authorization/modifyAccount",
+    "/authorization/deleteAccount"
+  ],
+  "p2pMessage": [
+    "/p2pMessage",
+    "/p2pMessage/getSendP2PMessage",
+    "/p2pMessage/setMaskWords",
+    "/p2pMessage/getMaskWords"
+  ],
+  "insider": [
+    "/player/cutdown",
+    "/player/setIsInsider"
+  ],
+  "sendDiamond": [
+    "/gmrecharge/withVip",
+    "/gmrecharge/withoutVip"
+  ],
+  "isBeauty": [
+    "/player/setBeautyAuthCount",
+    "/player/setBeauty"
+  ],
+  "isBadGuy": [
+    "/player/setBadLuckGuy"
+  ],
+  "isBanToLogin": [
+    "/player/banToLogin"
+  ],
+  "rechargeAmount": [
+    "/rechargeAmount",
+    "/rechargeAmount/get",
+    "/rechargeAmount/set",
+    "/rechargeAmount/getFirstRechargeAnnounceWins",
+    "/rechargeAmount/setFirstRechargeAnnounceWins",
+    "/rechargeAmount/getGiveGiftWins",
+    "/rechargeAmount/setGiveGiftWins",
+    "/rechargeAmount/getBlessingAnnounce",
+    "/rechargeAmount/setBlessingAnnounce"
+  ],
+  "blessing": [
+    "/blessing",
+    "/blessing/list",
+    "/blessing/add",
+    "/blessing/update",
+    "/blessing/details",
+    "/blessing/setState",
+    "/blessing/addAward",
+    "/blessing/deleteAward",
+    "/blessing/getActivityAccounts"
+  ]
+}

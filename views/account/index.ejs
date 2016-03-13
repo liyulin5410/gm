@@ -1,0 +1,322 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="language" content="zh-CN" />
+      <title><%= title %></title>
+      <link rel="stylesheet" type="text/css"
+              href="/js/ExtJS/resources/css/ext-all.css" />
+      <link rel="stylesheet" type="text/css"
+            href="/js/ExtJS/layout-browser.css" />
+
+  </head>
+  <script type="text/javascript" src="/js/ExtJS/ext-all.js"></script>
+  <script type="text/javascript" src="/js/template/viewport.js"></script>
+  <script type="text/javascript" src="/js/template/tree.js"></script>
+  <script type="text/javascript" src="/js/core/common.js"></script>
+  <script type="text/javascript" src="/js/core/gmHead.js"></script>
+  <body>
+  <script type="text/javascript">
+      var gmAccount = {
+	      name: '<%= account.name %>',
+	      serverId: <%= account.serverId%>,
+	      appId: '<%= account.appId%>',
+	      operator: '<%= account.operator%>',
+
+          isAdmin : <%= account.isAdmin %>,
+          board : <%= account.board || 0 %>,
+          arpu : <%= account.arpu || 0 %>,
+          retention : <%= account.retention || 0 %>,
+          paidRetention : <%= account.paidRetention || 0 %>,
+          announce : <%= account.announce || 0 %>,
+          player : <%= account.player || 0 %>,
+          robot : <%= account.robot || 0 %>,
+          diamond : <%= account.diamond || 0 %>,
+          gamingMoney : <%= account.gamingMoney || 0 %>,
+          insiderGamingMoney : <%= account.insiderGamingMoney || 0 %>,
+          cdKey : <%= account.cdKey || 0 %>,
+          cdKeyOrder : <%= account.cdKeyOrder || 0 %>,
+          coupon : <%= account.coupon || 0 %>,
+          present : <%= account.present || 0 %>,
+          systemAction : <%= account.systemAction || 0 %>,
+          feedback : <%= account.feedback || 0 %>,
+          presentExchange : <%= account.presentExchange || 0 %>,
+          recharge : <%= account.recharge || 0 %>,
+          cards : <%= account.cards || 0 %>,
+          channel : <%= account.channel || 0 %>,
+          poker : <%= account.poker || 0 %>,
+          accountAnnounce : <%= account.accountAnnounce || 0 %>,
+          beauty : <%= account.beauty || 0 %>,
+          activity : <%= account.activity || 0 %>,
+          authorization : <%= account.authorization || 0 %>,
+          p2pMessage : <%= account.p2pMessage || 0 %>,
+          rechargeAmount : <%= account.rechargeAmount || 0 %>,
+          blessing : <%= account.blessing || 0 %>
+      };
+  </script>
+
+  <% if (title == "数据总览") { %>
+   <script type="text/javascript" src="/js/core/board.js"></script>
+   <script>
+      Ext.onReady(function() {
+          viewport();
+          treeNavigation(gmAccount);
+          boardData();
+      });
+  </script>
+  <% } else if (title == "日留存率") { %>
+  <script type="text/javascript" src="/js/core/retented.js"></script>
+  <script>
+      Ext.onReady(function() {
+          viewport();
+          treeNavigation(gmAccount);
+          retention();
+      });
+  </script>
+  <% } else if (title == "充值日留存率") { %>
+  <script type="text/javascript" src="/js/core/paidRetented.js"></script>
+  <script>
+      Ext.onReady(function() {
+          viewport();
+          treeNavigation(gmAccount);
+          paidRetention();
+      });
+  </script>
+  <% } else if (title == "日关键数据") { %>
+  <script type="text/javascript" src="/js/core/arpu.js"></script>
+  <script>
+      Ext.onReady(function() {
+          viewport();
+          treeNavigation(gmAccount);
+          arpuData();
+      });
+  </script>
+  <% } else if (title == "添加通告") { %>
+  <script type="text/javascript" src="/js/core/announce.js"></script>
+  <script>
+      Ext.onReady(function() {
+          viewport();
+          treeNavigation(gmAccount);
+          announce();
+      });
+  </script>
+  <% } else if (title == "邮件管理") { %>
+  <script type="text/javascript" src="/js/core/mail.js"></script>
+  <script>
+      Ext.onReady(function() {
+          viewport();
+          treeNavigation(gmAccount);
+          initMail(JSON.parse('<%- items %>'));
+      });
+  </script>
+  <% } else if (title == "玩家管理") { %>
+  <script type="text/javascript" src="/js/core/player.js"></script>
+  <script>
+      Ext.onReady(function() {
+          viewport();
+          treeNavigation(gmAccount);
+          searchPlayer();
+      });
+  </script>
+  <% } else if (title == "系统设置") { %>
+  <script type="text/javascript" src="/js/core/robot.js"></script>
+  <script>
+      Ext.onReady(function() {
+          viewport();
+          treeNavigation(gmAccount);
+          robotManager();
+      });
+  </script>
+  <% } else if (title == "钻石充值/消耗") { %>
+  <script type="text/javascript" src="/js/core/diamond.js"></script>
+  <script>
+      Ext.onReady(function() {
+          viewport();
+          treeNavigation(gmAccount);
+          diamond();
+      });
+  </script>
+  <% } else if (title == "金币充值/消耗") { %>
+  <script type="text/javascript" src="/js/core/money.js"></script>
+  <script>
+      Ext.onReady(function() {
+          viewport();
+          treeNavigation(gmAccount);
+          gamingMoney();
+      });
+  </script>
+  <% } else if (title == "特殊玩家日金币充值/消耗") { %>
+  <script type="text/javascript" src="/js/core/money.js"></script>
+  <script>
+      Ext.onReady(function() {
+          viewport();
+          treeNavigation(gmAccount);
+          insiderGamingMoney();
+      });
+  </script>
+  <% } else if (title == "CDKEY") { %>
+  <script type="text/javascript" src="/js/core/cdkey.js"></script>
+  <script>
+      Ext.onReady(function() {
+          viewport();
+          treeNavigation(gmAccount);
+          cdKeyManage();
+      });
+  </script>
+  <% } else if (title == "CDKEY充值") { %>
+  <script type="text/javascript" src="/js/core/cdkeyOrder.js"></script>
+  <script>
+      Ext.onReady(function() {
+          viewport();
+          treeNavigation(gmAccount);
+          cdKeyOrder();
+      });
+  </script>
+  <% } else if (title == "礼券产出/消耗") { %>
+  <script type="text/javascript" src="/js/core/coupon.js"></script>
+  <script>
+      Ext.onReady(function() {
+          viewport();
+          treeNavigation(gmAccount);
+          coupon();
+      });
+  </script>
+  <% } else if (title == "礼品") { %>
+  <script type="text/javascript" src="/js/core/present.js"></script>
+  <script>
+      Ext.onReady(function() {
+          viewport();
+          treeNavigation(gmAccount);
+          present();
+      });
+  </script>
+  <% } else if (title == "系统操作") { %>
+  <script type="text/javascript" src="/js/core/gmAction.js"></script>
+  <script>
+      Ext.onReady(function() {
+          viewport();
+          treeNavigation(gmAccount);
+          gmAction();
+      });
+  </script>
+  <% } else if (title == "意见反馈") { %>
+  <script type="text/javascript" src="/js/core/feedback.js"></script>
+  <script>
+      Ext.onReady(function() {
+          viewport();
+          treeNavigation(gmAccount);
+          feedback();
+      });
+  </script>
+  <% } else if (title == "礼品兑换") { %>
+  <script type="text/javascript" src="/js/core/giftExchange.js"></script>
+  <script>
+      Ext.onReady(function() {
+          viewport();
+          treeNavigation(gmAccount);
+          giftExchange();
+      });
+  </script>
+  <% } else if (title == "短信充值操作") { %>
+  <script type="text/javascript" src="/js/core/recharge.js"></script>
+  <script>
+      Ext.onReady(function() {
+          viewport();
+          treeNavigation(gmAccount);
+          recharge();
+      });
+  </script>
+  <% } else if (title == "查询牌桌信息") { %>
+  <script type="text/javascript" src="/js/core/cards.js"></script>
+  <script>
+      Ext.onReady(function() {
+          viewport();
+          treeNavigation(gmAccount);
+          showCards();
+      });
+  </script>
+  <% } else if (title == "客服通道") { %>
+  <script type="text/javascript" src="/js/core/gmChannel.js"></script>
+  <script>
+      Ext.onReady(function() {
+          viewport();
+          treeNavigation(gmAccount);
+          gmChannel();
+      });
+  </script>
+  <% } else if (title == "牌局") { %>
+  <script type="text/javascript" src="/js/core/poker.js"></script>
+  <script type="text/javascript" src="/js/extexcel/export-all.js"></script>
+  <script>
+      Ext.onReady(function() {
+          viewport();
+          treeNavigation(gmAccount);
+          poker();
+      });
+  </script>
+  <% } else if (title == "查看广播") { %>
+  <script type="text/javascript" src="/js/core/accountAnnounce.js"></script>
+  <script>
+      Ext.onReady(function() {
+          viewport();
+          treeNavigation(gmAccount);
+          accountAnnounce();
+      });
+  </script>
+  <% } else if (title == "美女认证") { %>
+  <script type="text/javascript" src="/js/core/beauty.js"></script>
+  <script>
+      Ext.onReady(function() {
+          viewport();
+          treeNavigation(gmAccount);
+          beauty();
+      });
+  </script>
+  <% } else if (title == "限时活动") { %>
+  <script type="text/javascript" src="/js/core/activity.js"></script>
+  <script>
+      Ext.onReady(function() {
+          viewport();
+          treeNavigation(gmAccount);
+          activity();
+      });
+  </script>
+  <% } else if (title == "用户权限管理") { %>
+  <script type="text/javascript" src="/js/core/authorization.js"></script>
+  <script>
+      Ext.onReady(function() {
+          viewport();
+          treeNavigation(gmAccount);
+          authorization();
+      });
+  </script>
+  <% } else if (title == "私聊查询") { %>
+  <script type="text/javascript" src="/js/core/p2pMessage.js"></script>
+  <script>
+      Ext.onReady(function() {
+          viewport();
+          treeNavigation(gmAccount);
+          p2pMessage();
+      });
+  </script>
+  <% } else if (title == "充值额度") { %>
+  <script type="text/javascript" src="/js/core/rechargeAmount.js"></script>
+  <script>
+      Ext.onReady(function() {
+          viewport();
+          treeNavigation(gmAccount);
+          rechargeAmount();
+      });
+  </script>
+  <% } else if (title == "祈福") { %>
+  <script type="text/javascript" src="/js/core/blessing.js"></script>
+  <script>
+      Ext.onReady(function() {
+          viewport();
+          treeNavigation(gmAccount);
+          blessing();
+      });
+  </script>
+  <% } %>
+  </body>
+</html>
