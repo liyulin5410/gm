@@ -51,7 +51,47 @@
           authorization : <%= account.authorization || 0 %>,
           p2pMessage : <%= account.p2pMessage || 0 %>,
           rechargeAmount : <%= account.rechargeAmount || 0 %>,
-          blessing : <%= account.blessing || 0 %>
+          blessing : <%= account.blessing || 0 %>,
+
+          messagepandect: <%=account.messagepandect ||0 %>,
+          messageplayer: <%=account.messageplayer ||0 %>,
+          logplayer: <%=account.logplayer ||0 %>,
+          logpower: <%=account.logpower ||0 %>,
+          logPVE: <%= account.logPVE ||0 %>,
+          logPVES: <%= account.logPVES ||0%>,
+          logPVA : <%= account.logPVA ||0 %>,
+          logPVAS : <%= account.logPVAS ||0 %>,
+          logPVP : <%= account.logPVP ||0 %>,
+          logPVPS : <%= account.logPVPS ||0 %>,
+          logPVB : <%= account.logPVB||0%>,
+          logPVBS : <%= account.logPVBS||0%>,
+          logSignS : <%= account.logSignS||0%>,
+          logMailS : <%= account.logMailS||0%>,
+          logMail : <%= account.logMail||0%>,
+          logHero : <%= account.logHero||0%>,
+          logWeapon : <%= account.logWeapon||0%>,
+          logTask : <%= account.logTask||0%>,
+          logEergy : <%= account.logEergy||0%>,
+          logEergyS : <%= account.logEergyS||0%>,
+          logItem : <%= account.logItem||0%>,
+          logItemS : <%= account.logItemS||0%>,
+          logActivity : <%= account.logActivity||0%>,
+          logGift : <%= account.logGift||0%>,
+          logShop : <%= account.logShop||0%>,
+          logShopS : <%= account.logShopS||0%>,
+          logDimondC : <%= account.logDimondC||0%>,
+          logDimondA : <%= account.logDimondA||0%>,
+          logRecharge : <%= account.logRecharge||0%>,
+          logGoldA : <%= account.logGoldA||0%>,
+          logGoldC : <%= account.logGoldC||0%>,
+          manageAnnouncement : <%= account.manageAnnouncement||0%>,
+          manageActivity : <%= account.manageActivity||0%>,
+          manageSign : <%= account.manageSign||0%>
+
+
+
+
+
       };
   </script>
 
@@ -64,7 +104,7 @@
           boardData();
       });
   </script>
-  <% } else if (title == "日留存率") { %>
+  <% } else if (title == "日留存率")  {%>
   <script type="text/javascript" src="/js/core/retented.js"></script>
   <script>
       Ext.onReady(function() {
@@ -317,6 +357,313 @@
           blessing();
       });
   </script>
+  <% } else if (title == "全服查询玩家信息总览") { %>
+  <script type="text/javascript" src="/js/core/messagepandect.js"></script>
+  <script>
+      Ext.onReady(function() {
+          viewport();
+          treeNavigation(gmAccount);
+          messagepandectData();
+      });
+  </script>
+  <% } else if (title == "查询玩家信息") { %>
+  <script type="text/javascript" src="/js/core/messageplayer.js"></script>
+  <script>
+      Ext.onReady(function() {
+          viewport();
+          treeNavigation(gmAccount);
+          messageplayerData();
+      });
+  </script>
+  <% } else if (title == "帐号创建登陆登出日志") { %>
+  <script type="text/javascript" src="/js/core/logplayer.js"></script>
+  <script>
+      Ext.onReady(function() {
+          viewport();
+          treeNavigation(gmAccount);
+          logplayerData();
+      });
+  </script>
+  <% } else if (title == "体力消耗日志") { %>
+  <script type="text/javascript" src="/js/core/logpower.js"></script>
+  <script>
+      Ext.onReady(function() {
+          viewport();
+          treeNavigation(gmAccount);
+          logpowerData();
+      });
+  </script>
+  <% } else if (title == "关卡数据个人日志") { %>
+  <script type="text/javascript" src="/js/core/logPVE.js"></script>
+  <script>
+      Ext.onReady(function() {
+          viewport();
+          treeNavigation(gmAccount);
+          logPVEData();
+      });
+  </script>
+  <% } else if (title == "关卡数据全服统计") { %>
+  <script type="text/javascript" src="/js/core/logPVES.js"></script>
+  <script>
+      Ext.onReady(function() {
+          viewport();
+          treeNavigation(gmAccount);
+          logPVESData();
+      });
+  </script>
+  <% } else if (title == "竞技塔个人爬塔日志") { %>
+  <script type="text/javascript" src="/js/core/logPVA.js"></script>
+  <script>
+      Ext.onReady(function() {
+          viewport();
+          treeNavigation(gmAccount);
+          logPVAData();
+      });
+  </script>
+  <% } else if (title == "竞技塔爬塔日志") { %>
+  <script type="text/javascript" src="/js/core/logPVAS.js"></script>
+  <script>
+      Ext.onReady(function() {
+          viewport();
+          treeNavigation(gmAccount);
+          logPVASData();
+      });
+  </script>
+  <% } else if (title == "周赛场个人日志") { %>
+  <script type="text/javascript" src="/js/core/logPVP.js"></script>
+  <script>
+      Ext.onReady(function() {
+          viewport();
+          treeNavigation(gmAccount);
+          logPVPData();
+      });
+  </script>
+  <% } else if (title == "周赛场日志") { %>
+  <script type="text/javascript" src="/js/core/logPVPS.js"></script>
+  <script>
+      Ext.onReady(function() {
+          viewport();
+          treeNavigation(gmAccount);
+          logPVPSData();
+      });
+  </script>
+  <% } else if (title == "无尽boss个人日志") { %>
+  <script type="text/javascript" src="/js/core/logPVB.js"></script>
+  <script>
+      Ext.onReady(function() {
+          viewport();
+          treeNavigation(gmAccount);
+          logPVBData();
+      });
+  </script>
+  <% } else if (title == "无尽boss全服日志") { %>
+  <script type="text/javascript" src="/js/core/logPVBS.js"></script>
+  <script>
+      Ext.onReady(function() {
+          viewport();
+          treeNavigation(gmAccount);
+          logPVBSData();
+      });
+  </script>
+  <% } else if (title == "账号签到领取日志") { %>
+  <script type="text/javascript" src="/js/core/logSignS.js"></script>
+  <script>
+      Ext.onReady(function() {
+          viewport();
+          treeNavigation(gmAccount);
+          logSignSData();
+      });
+  </script>
+  <% } else if (title == "邮件全服日志") { %>
+  <script type="text/javascript" src="/js/core/logMailS.js"></script>
+  <script>
+      Ext.onReady(function() {
+          viewport();
+          treeNavigation(gmAccount);
+          logMailSData();
+      });
+  </script>
+  <% } else if (title == "收取个人邮件") { %>
+  <script type="text/javascript" src="/js/core/logMail.js"></script>
+  <script>
+      Ext.onReady(function() {
+          viewport();
+          treeNavigation(gmAccount);
+          logMailData();
+      });
+  </script>
+  <% } else if (title == "英雄成长日志") { %>
+  <script type="text/javascript" src="/js/core/logHero.js"></script>
+  <script>
+      Ext.onReady(function() {
+          viewport();
+          treeNavigation(gmAccount);
+          logHeroData();
+      });
+  </script>
+  <% } else if (title == "武器成长日志") { %>
+  <script type="text/javascript" src="/js/core/logWeapon.js"></script>
+  <script>
+      Ext.onReady(function() {
+          viewport();
+          treeNavigation(gmAccount);
+          logWeaponData();
+      });
+  </script>
+  <% } else if (title == "任务交付日志") { %>
+  <script type="text/javascript" src="/js/core/logTask.js"></script>
+  <script>
+      Ext.onReady(function() {
+          viewport();
+          treeNavigation(gmAccount);
+          logTaskData();
+      });
+  </script>
+  <% } else if (title == "能量卡购买个人日志") { %>
+  <script type="text/javascript" src="/js/core/logEergy.js"></script>
+  <script>
+      Ext.onReady(function() {
+          viewport();
+          treeNavigation(gmAccount);
+          logEergyData();
+      });
+  </script>
+  <% } else if (title == "能量卡购买全服日志") { %>
+  <script type="text/javascript" src="/js/core/logEergyS.js"></script>
+  <script>
+      Ext.onReady(function() {
+          viewport();
+          treeNavigation(gmAccount);
+          logEergySData();
+      });
+  </script>
+  <% } else if (title == "道具使用日志") { %>
+  <script type="text/javascript" src="/js/core/logItem.js"></script>
+  <script>
+      Ext.onReady(function() {
+          viewport();
+          treeNavigation(gmAccount);
+          logItemData();
+      });
+  </script>
+  <% } else if (title == "道具消耗全服日志") { %>
+  <script type="text/javascript" src="/js/core/logItemS.js"></script>
+  <script>
+      Ext.onReady(function() {
+          viewport();
+          treeNavigation(gmAccount);
+          logItemSData();
+      });
+  </script>
+  <% } else if (title == "活动参与日志") { %>
+  <script type="text/javascript" src="/js/core/logActivity.js"></script>
+  <script>
+      Ext.onReady(function() {
+          viewport();
+          treeNavigation(gmAccount);
+          logActivityData();
+      });
+  </script>
+  <% } else if (title == "礼包领取日志") { %>
+  <script type="text/javascript" src="/js/core/logGift.js"></script>
+  <script>
+      Ext.onReady(function() {
+          viewport();
+          treeNavigation(gmAccount);
+          logGiftData();
+      });
+  </script>
+  <% } else if (title == "商店购买个人日志") { %>
+  <script type="text/javascript" src="/js/core/logShop.js"></script>
+  <script>
+      Ext.onReady(function() {
+          viewport();
+          treeNavigation(gmAccount);
+          logShopData();
+      });
+  </script>
+  <% } else if (title == "商店购买日志总览") { %>
+  <script type="text/javascript" src="/js/core/logShopS.js"></script>
+  <script>
+      Ext.onReady(function() {
+          viewport();
+          treeNavigation(gmAccount);
+          logShopSData();
+      });
+  </script>
+  <% } else if (title == "用户钻石花费记录") { %>
+  <script type="text/javascript" src="/js/core/logDimondC.js"></script>
+  <script>
+      Ext.onReady(function() {
+          viewport();
+          treeNavigation(gmAccount);
+          logDimondCData();
+      });
+  </script>
+  <% } else if (title == "用户钻石获得个人日志") { %>
+  <script type="text/javascript" src="/js/core/logDimondA.js"></script>
+  <script>
+      Ext.onReady(function() {
+          viewport();
+          treeNavigation(gmAccount);
+          logDimondAData();
+      });
+  </script>
+  <% } else if (title == "用户充值个人日志") { %>
+  <script type="text/javascript" src="/js/core/logRecharge.js"></script>
+  <script>
+      Ext.onReady(function() {
+          viewport();
+          treeNavigation(gmAccount);
+          logRechargeData();
+      });
+  </script>
+  <% } else if (title == "用户金币获得个人日志") { %>
+  <script type="text/javascript" src="/js/core/logGoldA.js"></script>
+  <script>
+      Ext.onReady(function() {
+          viewport();
+          treeNavigation(gmAccount);
+          logGoldAData();
+      });
+  </script>
+  <% } else if (title == "用户金币消耗个人日志") { %>
+  <script type="text/javascript" src="/js/core/logGoldC.js"></script>
+  <script>
+      Ext.onReady(function() {
+          viewport();
+          treeNavigation(gmAccount);
+          logGoldCData();
+      });
+  </script>
+  <% } else if (title == "公告管理") { %>
+  <script type="text/javascript" src="/js/core/manageAnnouncement.js"></script>
+  <script>
+      Ext.onReady(function() {
+          viewport();
+          treeNavigation(gmAccount);
+          manageAnnouncementData();
+      });
+  </script>
+  <% } else if (title == "活动管理") { %>
+  <script type="text/javascript" src="/js/core/manageActivity.js"></script>
+  <script>
+      Ext.onReady(function() {
+          viewport();
+          treeNavigation(gmAccount);
+          manageActivityData();
+      });
+  </script>
+  <% } else if (title == "签到管理") { %>
+  <script type="text/javascript" src="/js/core/manageSign.js"></script>
+  <script>
+      Ext.onReady(function() {
+          viewport();
+          treeNavigation(gmAccount);
+          manageSignData();
+      });
+  </script>
+
   <% } %>
   </body>
 </html>

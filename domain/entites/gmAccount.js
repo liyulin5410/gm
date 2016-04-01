@@ -38,6 +38,42 @@ var GmAccount = function () {
     this.isBadGuy = 0;
     this.rechargeAmount = 0;
     this.blessing = 0;
+
+    this.messagepandect=0;
+    this.messageplayer=0;
+    this.logplayer=0;
+    this.logpower=0;
+    this.logPVE=0;
+    this.logPVES=0;
+    this.logPVA=0;
+    this.logPVAS=0;
+    this.logPVP=0;
+    this.logPVPS=0;
+    this.logPVB=0;
+    this.logPVBS=0;
+    this.logSignS=0;
+    this.logMailS=0;
+    this.logMail=0;
+    this.logHero=0;
+    this.logWeapon=0;
+    this.logTask=0;
+    this.logEergy=0;
+    this.logEergyS=0;
+    this.logItem=0;
+    this.logItemS=0;
+    this.logActivity=0;
+    this.logGift=0;
+    this.logShop=0;
+    this.logShopS=0;
+    this.logDimondC=0;
+    this.logDimondA=0;
+    this.logRecharge=0;
+    this.logGoldA=0;
+    this.logGoldC=0;
+    this.manageAnnouncement=0;
+    this.manageActivity=0;
+    this.manageSign=0;
+
 };
 
 GmAccount.prototype.setIsAdmin = function (isAdmin) {
@@ -186,6 +222,109 @@ GmAccount.prototype.setRechargeAmount = function (amount) {
 
 GmAccount.prototype.setBlessing = function (blessing) {
     this.blessing = blessing;
+};
+
+GmAccount.prototype.setMessagepandect = function (messagepandect) {
+    this.messagepandect = messagepandect;
+};
+GmAccount.prototype.setMessageplayer = function (messageplayer) {
+    this.messageplayer = messageplayer;
+};
+GmAccount.prototype.setLogplayer = function (logplayer) {
+    this.logplayer = logplayer;
+};
+GmAccount.prototype.setLogpower = function (logpower) {
+    this.logpower = logpower;
+};
+GmAccount.prototype.setLogPVE = function (logPVE) {
+    this.logPVE = logPVE;
+};
+GmAccount.prototype.setLogPVES = function (logPVES) {
+    this.logPVES = logPVES;
+};
+GmAccount.prototype.setLogPVA = function (logPVA) {
+    this.logPVA = logPVA;
+};
+GmAccount.prototype.setLogPVAS = function (logPVAS) {
+    this.logPVAS = logPVAS;
+};
+GmAccount.prototype.setLogPVP = function (logPVP) {
+    this.logPVP = logPVP;
+};
+GmAccount.prototype.setLogPVPS = function (logPVPS) {
+    this.logPVPS = logPVPS;
+};
+GmAccount.prototype.setLogPVB = function (logPVB) {
+    this.logPVB = logPVB;
+};
+GmAccount.prototype.setLogPVBS = function (logPVBS) {
+    this.logPVBS = logPVBS;
+};
+GmAccount.prototype.setLogSignS = function (logSignS) {
+    this.logSignS = logSignS;
+};
+GmAccount.prototype.setLogMailS = function (logMailS) {
+    this.logMailS = logMailS;
+};
+GmAccount.prototype.setLogMail = function (logMail) {
+    this.logMail = logMail;
+};
+GmAccount.prototype.setLogHero = function (logHero) {
+    this.logHero = logHero;
+};
+GmAccount.prototype.setLogWeapon = function (logWeapon) {
+    this.logWeapon = logWeapon;
+};
+GmAccount.prototype.setLogTask = function (logTask) {
+    this.logTask = logTask;
+};
+GmAccount.prototype.setLogEergy = function (logEergy) {
+    this.logEergy = logEergy;
+};
+GmAccount.prototype.setLogEergyS = function (logEergyS) {
+    this.logEergyS = logEergyS;
+};
+GmAccount.prototype.setLogItem = function (logItem) {
+    this.logItem = logItem;
+};
+GmAccount.prototype.setLogItemS = function (logItemS) {
+    this.logItemS = logItemS;
+};
+GmAccount.prototype.setLogActivity = function (logActivity) {
+    this.logActivity = logActivity;
+};
+GmAccount.prototype.setLogGift = function (logGift) {
+    this.logGift = logGift;
+};
+GmAccount.prototype.setLogShop = function (logShop) {
+    this.logShop = logShop;
+};
+GmAccount.prototype.setLogShopS = function (logShopS) {
+    this.logShopS = logShopS;
+};
+GmAccount.prototype.setLogDimondC = function (logDimondC) {
+    this.logDimondC = logDimondC;
+};
+GmAccount.prototype.setLogDimondA = function (logDimondA) {
+    this.logDimondA = logDimondA;
+};
+GmAccount.prototype.setLogRecharge = function (logRecharge) {
+    this.logRecharge = logRecharge;
+};
+GmAccount.prototype.setLogGoldA = function (logGoldA) {
+    this.logGoldA = logGoldA;
+};
+GmAccount.prototype.setLogGoldC = function (logGoldC) {
+    this.logGoldC = logGoldC;
+};
+GmAccount.prototype.setManageAnnouncement = function (manageAnnouncement) {
+    this.manageAnnouncement = manageAnnouncement;
+};
+GmAccount.prototype.setManageActivity = function (manageActivity) {
+    this.manageActivity = manageActivity;
+};
+GmAccount.prototype.setManageSign = function (manageSign) {
+    this.manageSign = manageSign;
 };
 
 module.exports.createGmAccount = function () {
